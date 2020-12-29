@@ -28,11 +28,11 @@ function prayerTime(latitude, longitude){
 }
 
 function success(position) { //third function
-    prayerTime(position.coords.latitude, position.coords.longitude)
+    prayerTime(position.coords.latitude, position.coords.longitude);
 }
 
 function error() {
-    alert('Position could not be accessed.');
+    prayerTime('-6.21462', '106.84513'); //default lat, lon Jakarta
 }
 
 function userLocation() { //second function
