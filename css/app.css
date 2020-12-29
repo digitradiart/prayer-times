@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +8,59 @@
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     background-image: url('https://images.unsplash.com/photo-1577792077974-0a424b741d34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1499&q=80');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-color: antiquewhite;
+}
+
+#app {
+    margin: 10% auto;
+    width: 300px;
+}
+
+#app h1 {
+    text-align: center;
+    font-size: 2em;
+    padding: 5px;
+    color: white;
+    background-color: rgb(150, 104, 61);
+}
+
+#app h2 {
+    background-color: burlywood;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+#app table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: cadetblue;
+}
+
+#app table td {
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+#app table td:last-child {
+    text-align: right;
+}
+
+#app table tr:nth-child(even) {
+    background-color: burlywood;
+}
+
+#app table tr:nth-child(odd) {
+    background-color: whitesmoke;
+}
+
+#app table td tr {
+    font-size: 1em;
+    padding: 0.5em;
+    /* margin: 5em; */
 }

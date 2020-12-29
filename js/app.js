@@ -2,15 +2,17 @@ function prayerTime(latitude, longitude){
     fetch('http://api.aladhan.com/v1/calendar?latitude='+latitude+'&longitude='+longitude+'&method=4')
     .then(theResponse => theResponse.json())
     .then(function(theResponse){
-        let date        = new Date();
-        let today       = date.getDate();
-        let data        = theResponse.data[0].timings;
-        // let dateLocation    = theResponse.data[today].date.readable;
-        // let dateTimezone    = theResponse.data[today].meta.timezone;        
+        let date            = new Date();
+        let today           = date.getDate();
+        let data            = theResponse.data[0].timings;
+        let dateLocation    = theResponse.data[today].date.readable;
+        let dateTimezone    = theResponse.data[today].meta.timezone;        
 
         let app             = document.getElementById('app');
         let table           = document.createElement('table');
-        let tableTbody       = document.createElement('tbody');
+        let tableTbody      = document.createElement('tbody');
+        let loc             = document.createElement('h2');
+        let day             = document.createElement('h2');
 
         for (i in data) {
             let row         = tableTbody.insertRow();
@@ -21,10 +23,13 @@ function prayerTime(latitude, longitude){
             tableTbody.appendChild(row);
         }
 
+        loc.innerHTML   = dateTimezone;
+        app.appendChild(loc);
+        day.innerHTML   = dateLocation;
+        app.appendChild(day);
         table.appendChild(tableTbody);
         app.appendChild(table);
-        // app.appendChild(h2);
-    });
+    }); 
 }
 
 function success(position) { //third function
@@ -47,7 +52,6 @@ function index() { //first function
     let app         = document.getElementById('app');
     let h1          = document.createElement('h1');
     h1.innerHTML    = 'Prayer Times';
-    
     app.appendChild(h1);
     userLocation();
 }
