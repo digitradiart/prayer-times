@@ -71,7 +71,8 @@ body {
       background-color: lightblue;
     }
 
-    body {
-        margin: 10px auto;
+    #app {
+        margin: auto;
+        width: 95%;
     }
 }
