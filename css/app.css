@@ -72,7 +72,7 @@ body {
     }
 
     #app {
-        margin: auto;
-        width: 95%;
+        margin: 5% auto;
+        width: 90%;
     }
 }
