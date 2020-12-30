@@ -67,12 +67,12 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    body {
+    /* body {
       background-color: lightblue;
-    }
+    } */
 
     #app {
-        margin: 5% auto;
+        padding: 5% auto;
         width: 90%;
     }
 }
