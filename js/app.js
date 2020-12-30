@@ -4,9 +4,12 @@ function prayerTime(latitude, longitude){
     .then(function(theResponse){
         let date            = new Date();
         let today           = date.getDate();
+        // console.log(`today is ${today}`);
         let data            = theResponse.data[0].timings;
-        let dateLocation    = theResponse.data[today].date.readable;
-        let dateTimezone    = theResponse.data[today].meta.timezone;        
+        let dateLocation    = theResponse.data[today-1].date.readable;
+        console.log(`today is ${dateLocation}`);
+        let dateTimezone    = theResponse.data[today-1].meta.timezone;        
+        console.log(`today is ${dateTimezone}`);
 
         let app             = document.getElementById('app');
         let table           = document.createElement('table');
@@ -37,7 +40,11 @@ function success(position) { //third function
 }
 
 function error() {
-    prayerTime('-6.21462', '106.84513'); //default lat, lon Jakarta
+    prayerTime('-6.2087634', '106.845599'); //default lat, lon Jakarta
+    // prayerTime('-2.533000', '140.717000'); //default lat, lon Jayapura
+    // prayerTime('-8.652933', '1117.361648'); //default lat, lon NTB
+    // prayerTime('-6.600000', '106.800000'); //default lat, lon Bogor
+    // https://www.gps-latitude-longitude.com
 }
 
 function userLocation() { //second function

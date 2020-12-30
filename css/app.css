@@ -19,7 +19,8 @@ body {
 
 #app {
     margin: 10% auto;
-    width: 300px;
+    width: 400px;
+    opacity: 0.9;
 }
 
 #app h1 {
@@ -44,7 +45,7 @@ body {
 
 #app table td {
     font-size: 1em;
-    padding: 0.5em;
+    padding: 1em;
 }
 
 #app table td:last-child {
@@ -63,4 +64,14 @@ body {
     font-size: 1em;
     padding: 0.5em;
     /* margin: 5em; */
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+
+    #app {
+        margin: 10px auto;
+    }
 }
